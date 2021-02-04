@@ -1,0 +1,347 @@
+/* *****************************************************************
+								TOOLS
+***************************************************************** */
+
+*, *::before, *::after {
+	box-sizing: inherit; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+}
+
+html {
+	font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+	background: linear-gradient(to bottom, rgba(208,197,186,1) 0,rgba(235,227,219,0.25) 50px,rgba(255,255,255,0) 150px);
+}
+
+/* *****************************************************************
+							GENERALITIES
+***************************************************************** */
+
+/* Le corps du document */
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	font-family: 'Athiti', sans-serif;
+	color: #000305;
+	background-color: #fff;
+}
+
+h1, h2, h3 {
+	font-family: 'Merienda', cursive;
+	color: #000305;
+	text-align:center;
+}
+
+/***************
+     ICONS 
+***************/
+h1:before, h1:after, h2:before, h2:after, h3:before, h3:after, header figcaption:before, header figcaption:after {
+	content:"\f005";
+	font-family: "Font Awesome 5 Free";
+	color:#950000;
+	font-weight:600;
+    font-size:1rem;
+    position:relative;
+}
+
+h1:before, h2:before, h3:before, header figcaption:before {
+	padding-right:1rem;
+}
+
+h1:after, h2:after, h3:after, header figcaption:after {
+	padding-left:1rem;
+}
+
+h1:before, h1:after{
+	top:-0.3rem;
+}
+
+h2:before, h2:after {
+	top:-0.3rem;
+}
+
+h3:before, h3:after {
+	top:-0.3rem;
+}
+
+header figcaption:before, header figcaption:after {
+	top:-0.2rem;
+}
+
+figcaption h3:before, figcaption h3:after {
+	content:"";
+}
+
+/***************
+     GENERAL 
+***************/
+/* Le titre principal d'un flux */
+h1 {
+	font-size:1.2em;
+	padding-top:3rem;
+}
+
+/* Le titre de second niveau  */
+h2 {
+	font-size: 1em;
+}
+
+/* Le titre de troisème niveau */
+h3 {
+	font-size: 0.9em;
+	padding-top:1.5rem;
+}
+
+/* Contenu principal */
+main {
+	padding: 3rem 1rem;
+}
+
+p {
+	font-size:1.5;
+}
+
+/* Les articles */
+article {
+	background-color:#ebe3db;
+}
+
+.welcome article {
+	background-color:inherit;
+}
+
+
+/* marge entre les sections */
+
+a {
+	text-decoration:none;
+}
+
+img {
+	max-width:100%;
+}
+
+/* *****************************************************************
+							CONTAINER
+***************************************************************** */
+
+/* Le container permet de limiter la largeur d'un contenu */
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding-top:2rem;
+}
+
+.w_50 {
+    width:48%;
+}
+/* *****************************************************************
+							MAIN LAYOUT
+***************************************************************** */
+/* General header / footer */
+
+
+/***************
+     HEADER 
+***************/
+header figure {
+	margin:0;
+	padding:3rem 0;
+	text-align:center;
+}
+
+header figcaption {
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:2rem;
+}
+
+header img {
+	max-width:30%;
+	padding-right:1.5rem;
+}
+
+nav {
+	display:flex;
+	flex-direction:column;
+	text-align:center;
+}
+
+nav a {
+	background-color:#ebe2db;
+	color:black;
+	font-weight:bold;
+	border-bottom:1px solid black;
+	padding:0.8rem 0;
+}
+
+nav a:hover, .special_menus a:hover{
+	color:#fff;
+	transition:0.7s;
+	background-color:#950000;
+}
+
+.current {
+	background-color:#4c4343;
+	color:#fff;
+}
+/***************
+     ASIDE 
+***************/
+
+ul {
+    list-style: none;
+}
+
+/***************
+  	 FOOTER 
+***************/
+footer {
+	text-align:center;
+	background-image :url("../img/general/footer-bg.jpg");
+	color:#fff;
+}
+
+footer h3 {
+	color:#fff;
+	border-bottom:1px dashed white;
+	margin:0 2rem;
+	padding-top:2em;
+	padding-bottom:1rem;
+}
+
+footer h3:before, footer h3:after {
+	content:"";
+}
+
+footer p {
+	line-height:0.6rem;
+	font-size:1.5rem;
+}
+
+.footer_contact p:last-child {
+	padding-top:1.5rem
+} 
+
+.icons {
+	color:#fff;
+	font-size:1.5em;
+	margin:0 0.3em;
+	margin-bottom:3rem;
+	padding-top:1em;
+}
+
+.icons:hover {
+	color:#950000;
+}
+
+
+/* *****************************************************************
+							RESPONSIVE
+***************************************************************** */
+
+/***************
+    Tablette 
+***************/
+@media screen and (min-width: 768px) {
+    .w_50 {
+		width:30%;
+	}
+    /***************
+	  	 HEADER 
+	***************/
+    .header {
+		background: transparent;
+	}
+    header img {
+    	width:20%;
+    }
+    
+	header figcaption:before, header figcaption:after {
+		top:-0.3rem;
+	}
+    /***************
+	  	  NAV 
+	***************/    
+    nav {
+    	flex-direction: row;
+    	justify-content:space-around;
+    	background-color:#ebe2db;
+    }
+    
+    nav a {
+    	border-bottom:none;
+    }
+    
+    .current {
+    	padding:0.8rem 1.5rem;
+    }
+    /***************
+  	     FOOTER 
+	***************/
+    .icons {
+    	font-size:1.2em;
+    }
+	
+	.footer {
+	    display:flex;
+	    justify-content:space-between;
+	    padding-bottom:3rem;
+	}
+	
+	aside, .footer_contact, .social_networks {
+	    width:30%;
+	}
+}
+
+/***************
+    DESKTOP 
+***************/
+@media screen and (min-width: 980px) {
+	main, header, .footer {
+		max-width:1500px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	main {
+		padding-top:1.5rem;
+	}
+	
+	/***************
+  	     HEADER 
+	***************/
+	header {
+		display:flex;
+		align-items:center;
+	}
+	
+	header figure {
+		display:flex;
+		align-items:center;
+		width:60%;
+		margin-left:1.5em;
+	}
+	
+	nav {
+		width:40%;
+		justify-content:flex-end;
+		background-color:inherit;
+	}
+	
+	nav a {
+		padding:0.8rem 1.5rem;
+		margin-right:1.5em;
+	}
+	
+	.footer {
+		display:flex;
+	    justify-content:space-between;
+	    padding-bottom:3rem;
+	}
+}

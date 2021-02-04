@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Restaurant">
+	<title>Freshly restaurant</title>
+	<link rel="icon" href="img/general/favicon.png" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/theme.css">
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet"> 
+	<!-- SCRIPT -->
+	<script src="https://kit.fontawesome.com/73ab01ebea.js" crossorigin="anonymous"></script>
+	
+</head>
+
+<body>
+<!--
+    __  __ ______ ___     ____   ______ ____ 
+   / / / // ____//   |   / __ \ / ____// __ \
+  / /_/ // __/  / /| |  / / / // __/  / /_/ /
+ / __  // /___ / ___ | / /_/ // /___ / _, _/ 
+/_/ /_//_____//_/  |_|/_____//_____//_/ |_|  
+                                             
+-->
+	
+	<header>
+		<figure>
+		    <img src="img/general/logo.png" alt="logo de freshly restaurant">
+			<figcaption>Freshly restaurant</figcaption>
+		</figure>
+	
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="menus.html">Menus</a>
+			<a class="current" href="contact.html">Contact</a>
+		</nav>
+	</header>
+<!-- 
+  __  __     _     ___  _   _ 
+ |  \/  |   / \   |_ _|| \ | |
+ | |\/| |  / _ \   | | |  \| |
+ | |  | | / ___ \  | | | |\  |
+ |_|  |_|/_/   \_\|___||_| \_|
+-->
+	<main class="page_contact">
+	    
+	    <section>
+	        
+            <h1>Contact us</h1>
+            <p>If you want to make a reservation, please complete this form</p>
+            <p><em>Fields with <abbr title="required" aria-hidden="true">*</abbr> are required</em></p>
+            
+            <article>
+                <form method="post" action="traitement.php">
+                    <fieldset class="resa">
+                        <legend>Reservation</legend>
+                        <label for="date">Date</label>
+    					<input type="text" name="date" id="date" placeholder="jj/mm/aaaa"/ required>
+    					
+    					<label for="time">Time</label>
+    					<input type="text" name="time" id="time" placeholder="--:--"/ required>
+    					
+    					<label for="guest">Number of guests</label>
+    					<input type="number" name="guest" id="number" min="1" max="50" required>
+                    </fieldset>
+                    
+                    <fieldset class="details">
+                        <legend>Details</legend>
+                        <label for="name">Name</label>
+    					<input type="text" name="name" id="name"/ required>
+    					
+    					<label for="email">Email</label>
+    					<input type="text" name="email" id="email"/>
+    					
+    					<label for="tel">Telephone</label>
+    					<input type="text" name="tel" id="tel"/ required>
+    				</fieldset>
+    				
+    				<fieldset class="request">
+    				    <legend>Further request</legend>
+    				    <textarea name="texte_demande" id="texte_demande"></textarea>
+    				</fieldset>
+    				
+    				<button type="submit">Reserve</button>
+                </form>
+            </article>
+		</section>
+		
+		<section>
+		    <h2>Our location</h2>
+		    <div id="map">
+        	    <!-- Ici s'affichera la carte -->
+        	</div>
+		</section>
+		
+	</main>
+<!-- 
+    ______ ____   ____  ______ ______ ____ 
+   / ____// __ \ / __ \/_  __// ____// __ \
+  / /_   / / / // / / / / /  / __/  / /_/ /
+ / __/  / /_/ // /_/ / / /  / /___ / _, _/ 
+/_/     \____/ \____/ /_/  /_____//_/ |_|  
+-->
+	<footer>
+		
+		<div class="footer">
+			<aside>
+				<h3>Opening hours</h3>
+				<p>Monday: Closed</p>
+				<p>Tue-Wed : 9am - 10pm</p>
+				<p>Thu-Fri : 9am - 10pm</p>
+				<p>Sat-Sun : 5pm - 10pm</p>
+			</aside>
+			
+			<div class="footer_contact">
+				<h3>Contact</h3>
+				<p>13 Christopher Street</p>
+				<p>New York,</p>
+				<p>NY 10014-3543</p>
+				<p>+01 2000 800 9999</p>
+			</div>
+			
+			<div class="social_networks">
+				<h3>Social networks</h3>
+				<a href="https://www.facebook.com/"><i class="icons fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/"><i class="icons fab fa-instagram"></i></a>
+				<a href="https://www.pinterest.com/"><i class="icons fab fa-pinterest-p"></i></a>
+			</div>
+		</div>
+		
+	</footer>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+	<script type="text/javascript">
+            // On initialise la latitude et la longitude de Paris (centre de la carte)
+            var lat = 40.73427;
+            var lon = -74.00044;
+            var macarte = null;
+            // Fonction d'initialisation de la carte
+            function initMap() {
+                // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+                macarte = L.map('map').setView([lat, lon], 18);
+                // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+                L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                    // Il est toujours bien de laisser le lien vers la source des données
+                    attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                    minZoom: 1,
+                    maxZoom: 20
+                }).addTo(macarte);
+                var marker = L.marker([lat, lon]).addTo(macarte);
+                marker.bindPopup("<h3>We are here !!</h3>").openPopup()
+            }
+            
+            window.onload = function(){
+    		// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+    		initMap(); 
+                };
+            
+        </script>
+</body>
+
+</html>

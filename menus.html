@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Restaurant">
+	<title>Freshly restaurant</title>
+	<link rel="icon" href="img/general/favicon.png" />
+	
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/theme.css">
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet"> 
+	<!-- SCRIPT -->
+	<script src="https://kit.fontawesome.com/73ab01ebea.js" crossorigin="anonymous"></script>
+	
+</head>
+
+<body>
+<!--
+    __  __ ______ ___     ____   ______ ____ 
+   / / / // ____//   |   / __ \ / ____// __ \
+  / /_/ // __/  / /| |  / / / // __/  / /_/ /
+ / __  // /___ / ___ | / /_/ // /___ / _, _/ 
+/_/ /_//_____//_/  |_|/_____//_____//_/ |_|  
+                                             
+-->
+	
+	<header>
+		<figure>
+		    <img src="img/general/logo.png" alt="logo de freshly restaurant">
+			<figcaption>Freshly restaurant</figcaption>
+		</figure>
+	
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a class="current" href="menus.html">Menus</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+<!-- 
+  __  __     _     ___  _   _ 
+ |  \/  |   / \   |_ _|| \ | |
+ | |\/| |  / _ \   | | |  \| |
+ | |  | | / ___ \  | | | |\  |
+ |_|  |_|/_/   \_\|___||_| \_|
+-->
+	<main class="page_menu">
+	    
+	    <section>
+            <h1>Details of our menus</h1>
+	        <p>Choose your main course according to your menu !</p>
+	        <section class="flex_button">
+    	        <button class="filter-btn menu_button" type="button" data-filter="all">All</button>
+                <button class="filter-btn menu_button" type="button" data-filter=".category-a">Meat</button>
+                <button class="filter-btn menu_button" type="button" data-filter=".category-b">Vegan</button>
+                <button class="filter-btn menu_button" type="button" data-filter=".category-c">Fish</button>
+            </section>
+            
+            <article class="all_menus">
+                <div id="MixItUp460569" class="container" style="">
+                    <div class="mix category-c" data-order="1">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/fish-01.jpg" alt="moules">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Grilled mussels</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div>
+                    
+                    <div class="mix category-b" data-order="2">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/vegan-03.jpg" alt="entrée vegan">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Mixed vegetables</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div>
+                    
+                    <div class="mix category-a" data-order="3">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/meat-03.jpg" alt="brochettes">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Freshly kebabs</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div>
+                    
+                    <div class="mix category-c" data-order="4">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/fish-02.jpg" alt="paëla">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Cajun shrimp</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div>
+                    
+                    <div class="mix category-a" data-order="5">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/meat-01.jpg" alt="burger">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Freshly burger</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div>  
+                    
+                    <div class="mix category-b" data-order="6">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/vegan-02.jpg" alt="poëlé d'aubergines">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Grilled eggplants</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div> 
+                    
+                    <div class="mix category-a" data-order="7">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/meat-02.jpg" alt="un truc gluant à la viande">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Beef stew with pasta</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div>
+                    
+                    <div class="mix category-c" data-order="8">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/fish-03.jpg" alt="pavé de saumon">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Grilled salmon</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div>
+                    
+                    <div class="mix category-b" data-order="9">
+                        <figure class="figure">
+    					<img class="img_menu" src="img/menu/vegan-01.jpg" alt="salade">
+    					<figcaption class="overlay">
+    						<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Vegetable Jambalaya</h2>
+    						</div>
+    					</figcaption>
+    					</figure>
+                    </div>
+                
+                </div>
+            </article>
+		</section>
+		
+		<section>
+		    <h2>Desserts</h2>
+		    <p>Here are the deserts you can choose to finish your meal (included in your menu).</p>
+		    
+		    <article>
+		    	<div class="container">
+			        <figure class="figure w_50">
+						<img class="img_menu" src="img/menu/desert-01.jpg" alt="tiramisu">
+						<figcaption class="overlay">
+							<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Tiramisu</h2>
+							</div>
+					    </figcaption>
+			        </figure>
+			        
+			        <figure class="figure w_50">
+						<img class="img_menu" src="img/menu/desert-02.jpg" alt="pancakes">
+						<figcaption class="overlay">
+							<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Freshly Pancakes</h2>
+							</div>
+					    </figcaption>
+			        </figure>
+	                
+	                <figure class="figure w_50">
+						<img class="img_menu" src="img/menu/desert-03.jpg" alt="yaourt avec fruits">
+						<figcaption class="overlay">
+							<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Redberries cup</h2>
+							</div>
+					    </figcaption>
+			        </figure>
+				</div>
+		    </article>
+		</section>
+		
+		<section>
+		    <h2>Cocktails</h2>
+		    <p>Soft drinkgs are included, but if you want you can order one of our excellent cocktails (not included in the menu).</p>
+		    
+		    <article>
+		    	<div class="container">
+			        <figure class="figure w_50">
+						<img class="img_menu" src="img/menu/drink-01.jpg" alt="Cocktail au Whisky">
+						<figcaption class="overlay">
+							<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Winter Whiskey</h2>
+							</div>
+					    </figcaption>
+					</figure>
+			        
+			        
+	                <figure class="figure w_50">
+						<img class="img_menu" src="img/menu/drink-02.jpg" alt="Paloma cocktail">
+						<figcaption class="overlay">
+							<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Paloma cocktail</h2>
+							</div>
+					    </figcaption>
+					    </figure>
+	                
+	                <figure class="figure w_50">
+						<img class="img_menu" src="img/menu/drink-03.jpg" alt="Bellini cocktail">
+						<figcaption class="overlay">
+							<div class="border">
+								<img src="img/general/fork-knife.svg" alt="un logo de couteau et fourchette">
+								<h2>Bellini cocktail</h2>
+							</div>
+					    </figcaption>
+			        </figure>
+                </div>
+		    </article>
+		</section>
+		
+	</main>
+<!-- 
+    ______ ____   ____  ______ ______ ____ 
+   / ____// __ \ / __ \/_  __// ____// __ \
+  / /_   / / / // / / / / /  / __/  / /_/ /
+ / __/  / /_/ // /_/ / / /  / /___ / _, _/ 
+/_/     \____/ \____/ /_/  /_____//_/ |_|  
+-->
+	<footer>
+		
+		<div class="footer">
+			<aside>
+				<h3>Opening hours</h3>
+				<p>Monday: Closed</p>
+				<p>Tue-Wed : 9am - 10pm</p>
+				<p>Thu-Fri : 9am - 10pm</p>
+				<p>Sat-Sun : 5pm - 10pm</p>
+			</aside>
+			
+			<div class="footer_contact">
+				<h3>Contact</h3>
+				<p>13 Christopher Street</p>
+				<p>New York,</p>
+				<p>NY 10014-3543</p>
+				<p>+01 2000 800 9999</p>
+			</div>
+			
+			<div class="social_networks">
+				<h3>Social networks</h3>
+				<a href="https://www.facebook.com/"><i class="icons fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/"><i class="icons fab fa-instagram"></i></a>
+				<a href="https://www.pinterest.com/"><i class="icons fab fa-pinterest-p"></i></a>
+			</div>
+		</div>
+		
+	</footer>
+	
+	<script src="js/mixitup.min.js"></script>
+	<script>
+	var mixer = mixitup('.container');
+	</script>
+	
+</body>
+
+</html>
